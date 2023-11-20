@@ -5,6 +5,10 @@ from eye_utils import *
 
 app = Flask(__name__)
 
+@app.route('/')
+def hello():
+    return 'You have reached Kings-CNN API service'
+
 @app.route('/process-image', methods=['POST'])
 def process_image():
     file = request.files['image']
